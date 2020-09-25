@@ -8,7 +8,13 @@ int main(){
     printf("Digite dois elementos: ");
     scanf("%s", array1);
     scanf("%s", array2);
-    for (i = 0; array1[i]!=0; i++){
+    for (i = 0; array1[i]!='\0'; i++){
+        if(array1[i] != array2[i]){
+            printf("Sao diferentes.");
+            return 0;
+        }
+    }
+    for (i = 0; array2[i]!='\0'; i++){
         if(array1[i] != array2[i]){
             printf("Sao diferentes.");
             return 0;
